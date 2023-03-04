@@ -1,0 +1,93 @@
+body {
+  font-family: monospace;
+  margin-top: 200px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-image: url(./images/mathBackground.jpg);
+  background-size: 100%;
+  
+}
+
+.container {
+  background-color: rgb(205, 188, 188);
+  padding: 5px;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+.text-container {
+  display: flex;
+  width: 340px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0px;
+  overflow: hidden;
+}
+
+p {
+  margin: 0 5px 0 0;
+  height: 55px;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 0;
+}
+
+
+.button-container {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 5px 0;
+}
+
+.text-container {
+  height: 110px;
+  background-color: rgb(177, 185, 124);
+  margin: 15px 10px 10px;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+
+
+button {
+  box-sizing: border-box;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  background-color: rgb(164, 164, 140);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.clear,
+.delete {
+  width: 170px;
+}
+
+.clear {
+  background-color: red;
+  color: black;
+}
+.clear:hover {
+  background-color: black;
+  color: red;
+}
+
+.delete:hover {
+  background-color: black;
+  color: rgb(164, 164, 140);
+}
+
+button:hover {
+  background-color: black;
+  color: rgb(164, 164, 140);
+}
+
+
