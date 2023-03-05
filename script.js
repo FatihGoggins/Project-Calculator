@@ -3,24 +3,7 @@ const currentOperation = document.querySelector('.current-operation');
 lastOperation.innerHTML = "";
 currentOperation.innerHTML = "0";
 
-
-const clearButton = document.querySelector('.btn.clear')
-clearButton.addEventListener('click', function(e) {
-  lastOperation.innerHTML = "";
-  currentOperation.innerHTML = "0";
-});
-
-const deleteButton = document.querySelector('.btn.delete');
-deleteButton.addEventListener('click', function(e) {
-  if (currentOperation.innerHTML === "Infinity" || currentOperation.innerHTML === "NaN") {
-    currentOperation.innerHTML = "";
-  } else {
-    currentOperation.innerHTML = currentOperation.innerHTML.slice(0, -1);
-  }
-});
-
 const buttons = Array.from(document.querySelectorAll('.btn'));
-buttons.splice(0, 2);
 buttons.forEach(button => { 
   button.addEventListener('click', function(e) {
     clickFunction(e.target);
@@ -99,6 +82,16 @@ function clickFunction(e) {
         currentOperation.innerHTML += currentButton;
       }
     }
+  }
+  if (currentButton === "DELETE") {
+    if (currentOperation.innerHTML === "Infinity" || currentOperation.innerHTML === "NaN") {
+      currentOperation.innerHTML = "";
+    } else {
+      currentOperation.innerHTML = currentOperation.innerHTML.slice(0, -1);
+    }
+  } else if (currentButton === "CLEAR") {
+    lastOperation.innerHTML = "";
+    currentOperation.innerHTML = "0";
   }
 }
 
