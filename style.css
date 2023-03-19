@@ -1,12 +1,14 @@
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: monospace;
-  margin-top: 200px;
   justify-content: center;
   display: flex;
   align-items: center;
   background-image: url(./images/mathBackground.jpg);
   background-size: 100%;
-  
 }
 
 .container {
@@ -85,9 +87,15 @@ button {
   color: rgb(164, 164, 140);
 }
 
-button:hover {
+button:hover{
   background-color: black;
   color: rgb(164, 164, 140);
+}
+
+.clear:hover,
+.delete:hover,
+button:hover {
+  scale: 1.05;
 }
 
 
